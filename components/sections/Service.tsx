@@ -49,20 +49,22 @@ const services = [
 
 export function Service() {
   return (
-    <Container className="max-w-5xl flex flex-col justify-center items-center py-20 gap-5">
-      <p className="text-sm font-medium tracking-wider font-Sansation text-lime-600">
+    <Container className="max-w-5xl flex flex-col justify-center items-center py-10 lg:py-20 gap-1 lg:gap-5">
+      <p className="text-xs lg:text-sm font-medium tracking-wider font-Sansation text-lime-600">
         Services Offered
       </p>
       <div className="flex gap-5 w-full items-center justify-center">
-        <div className="w-28 h-0.5 bg-gray-600" />
-        <h1 className="text-4xl font-medium">Captures Emotions Time</h1>
-        <div className="w-28 h-0.5 bg-gray-600" />
+        <div className="hidden lg:block w-28 h-0.5 bg-gray-600" />
+        <h1 className="text-xl lg:text-4xl font-medium">
+          Captures Emotions Time
+        </h1>
+        <div className="hidden lg:block w-28 h-0.5 bg-gray-600" />
       </div>
 
-      <div className="flex mt-5 gap-5 justify-between">
+      <div className="flex flex-col lg:flex-row mt-5 gap-5 justify-between">
         {services.map((service, index) => (
           <div
-            className="p-5 bg-gray-900 w-1/4 rounded-lg flex flex-col gap-3 border-2 border-transparent hover:border-lime-400 transition-all duration-500"
+            className="p-5 bg-gray-900 w-full lg:w-1/4 rounded-lg flex flex-col gap-3 border-2 border-transparent hover:border-lime-400 transition-all duration-500"
             key={index}
           >
             {service.icon}

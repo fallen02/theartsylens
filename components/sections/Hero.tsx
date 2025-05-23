@@ -1,17 +1,14 @@
 import { Container } from "@/Container";
-import { ArrowRignt } from "@/icons/arrow";
-import { RiFacebookCircleLine } from "react-icons/ri";
-import { TiSocialFacebook } from "react-icons/ti";
 
 export function Hero() {
   return (
-    <div className="relative bg-[url('/bg.jpg')] bg-fixed bg-cover py-5 flex justify-center items-center">
+    <div className="relative bg-[url('/bg.jpg')] lg:bg-fixed bg-cover p-0 lg:py-5 flex justify-center items-center">
       <div className="absolute inset-0 h-full w-full z-0 bg-radial from-gray-950/30 to-gray-950" />
       <a
         href="#about"
-        className="absolute h-11/12 w-20  top-0 right-5 flex flex-col gap-3 justify-center items-center  animate-cBounce"
+        className="absolute h-11/12 w-20  top-0 right-0 lg:right-5 flex flex-col gap-1 lg:gap-3 justify-center items-center  animate-cBounce"
       >
-        <p className="[writing-mode:vertical-rl] text-3xl text-gray-600 font-Wallpoet font-medium">
+        <p className="[writing-mode:vertical-rl] text-2xl text-gray-600 font-Wallpoet font-medium">
           Scroll Down
         </p>
         <svg
@@ -28,21 +25,21 @@ export function Hero() {
         </svg>
       </a>
 
-      <Container className="p-24 max-w-4xl flex gap-10 justify-center items-center z-10">
+      <Container className="px-10 lg:px-24 py-20 lg:py-24 max-w-4xl flex gap-10 justify-center items-center z-10">
         <div className="flex flex-col gap-3">
-          <p className="text-gray-200 text-xl">Photography Agency</p>
-          <h1 className="text-5xl/tight font-semibold text-gray-200">
+          <p className="text-gray-200 text-sm lg:text-lg">Photography Agency</p>
+          <h1 className="text-4xl lg:text-5xl/tight font-semibold text-gray-200">
             Where Every Click Tells a Story
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-xs lg:text-sm text-gray-300">
             Photography is a art of capturing moments and expressing emotions
             through visual story telling.
           </p>
-          <div className="relative mt-5 w-fit group">
+          <div className="relative mt-2  lg:mt-5 w-fit group">
             <div className="absolute inset-0 bg-lime-600 z-0 -translate-0.5 rounded-md group-hover:translate-0 transition-transform duration-150" />
             <a
               href="#"
-              className="relative text-gray-100 bg-gray-900 px-5 py-2.5 rounded-md font-Sansation font-medium z-50 inline-flex items-center gap-3 translate-0.5 group-hover:translate-0 transition-transform duration-150"
+              className="relative text-gray-100 bg-gray-900 px-2.5 py-1.5 text-sm lg:text-lg lg:px-5 lg:py-2.5 rounded-md font-Sansation font-medium z-50 inline-flex items-center gap-3 translate-0.5 group-hover:translate-0 transition-transform duration-150"
             >
               Read More
               <svg
@@ -63,7 +60,7 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative hidden lg:block ">
           <img
             src="https://placehold.co/500x650/transparent/F00"
             alt="Hero"

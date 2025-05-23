@@ -1,5 +1,4 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 import { Hero } from "@/sections/Hero";
 import { AboutUs } from "@/sections/AboutUs";
 import { Service } from "@/sections/Service";
