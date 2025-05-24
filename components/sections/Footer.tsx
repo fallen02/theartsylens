@@ -8,7 +8,7 @@ import {
 
 export function Footer() {
   return (
-    <div className="bg-gray-800/50 py-10 lg:py-20 flex flex-col justify-center  gap-10">
+    <div className="bg-gray-800/50 py-10 lg:py-20 flex flex-col  gap-10">
       <Container className="max-w-5xl flex flex-col gap-10">
         <div className="w-full flex flex-col gap-5 lg:flex-row">
           <div className="w-full lg:w-1/2 flex flex-col gap-2 lg:gap-5">
@@ -71,7 +71,7 @@ export function Footer() {
         </div>
       </Container>
       <div className="h-0.5 w-full max-w-7xl bg-lime-600 " />
-      <div className="max-w-5xl w-full flex flex-col lg:flex-row gap-5 justify-between px-3 lg:px-0">
+      <div className="max-w-5xl w-full flex flex-col mx-auto lg:flex-row gap-5 justify-between  px-3 lg:px-0">
         <p className="text-sm text-gray-400">
           &#169;{" "}
           <span className="font-medium text-lime-600">The Artsy Lens</span> 2025
