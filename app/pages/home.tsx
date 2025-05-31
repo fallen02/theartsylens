@@ -9,8 +9,8 @@ import { Faq } from "@/sections/Faq";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "The Artsy Lens" },
+    { name: "description", content: "Welcome to the Artsy Lens" },
   ];
 }
 

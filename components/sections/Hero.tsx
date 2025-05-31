@@ -1,9 +1,12 @@
 import { Container } from "@/Container";
+import HeroImg from "@/assets/hero.webp";
+import { FcCompactCamera } from "react-icons/fc";
 
 export function Hero() {
   return (
-    <div className="relative bg-[url('/bg.jpg')] lg:bg-fixed bg-cover p-0 lg:py-5 flex justify-center items-center">
-      <div className="absolute inset-0 h-full w-full z-0 bg-radial from-gray-950/30 to-gray-950" />
+    <div className="relative   lg:bg-fixed bg-cover p-0 lg:py-5 flex justify-center items-center">
+      <div className="absolute bg-[url('/img/bg.webp')] lg:bg-fixed bg-cover grayscale-100 inset-0 h-full w-full z-0 bg-radial from-gray-950/30 to-gray-950" />
+      <div className="absolute  grayscale-100 inset-0 h-full w-full z-0 bg-radial from-gray-950/30 to-gray-950" />
       <a
         href="#about"
         className="absolute h-11/12 w-20  top-0 right-0 lg:right-5 flex flex-col gap-1 lg:gap-3 justify-center items-center  animate-cBounce"
@@ -27,7 +30,12 @@ export function Hero() {
 
       <Container className="px-10 lg:px-24 py-20 lg:py-24 max-w-4xl flex gap-10 justify-center items-center z-10">
         <div className="flex flex-col gap-3">
-          <p className="text-gray-200 text-sm lg:text-lg">Photography Agency</p>
+          <div className="flex gap-2">
+            <FcCompactCamera className="border border-lime-600 rounded-full p-0.5" />
+            <p className="text-gray-200 text-xs lg:text-sm">
+              Photography Agency
+            </p>
+          </div>
           <h1 className="text-4xl lg:text-5xl/tight font-semibold text-gray-200">
             Where Every Click Tells a Story
           </h1>
@@ -61,13 +69,17 @@ export function Hero() {
           </div>
         </div>
         <div className="relative hidden lg:block ">
+          {/* <div className="absolute inset-0 -traslate-x-5 -translate-y-5 rounded-sm border border-lime-600 backdrop-blur-lg" /> */}
           <img
-            src="https://placehold.co/500x650/transparent/F00"
+            src={HeroImg}
             alt="Hero"
-            className="absolute z-0 -traslate-x-5 -translate-y-5 rounded-sm border border-red-200"
+            className="absolute z-0 -traslate-x-5 -translate-y-5 rounded-sm border border-lime-600 grayscale-100 opacity-40 blur-[2px]"
           />
+
+          {/* <div className="h-[650px] w-[500px] bg-red-400"></div> */}
           <img
-            src="https://placehold.co/500x650"
+            // src="https://placehold.co/500x650"
+            src={HeroImg}
             alt="Hero"
             className="translate-x-5 traslate-y-5 rounded-sm z-20"
           />

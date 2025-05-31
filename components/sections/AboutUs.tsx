@@ -70,7 +70,8 @@ export function AboutUs() {
               </a>
             </div>
           </div>
-          <div className="relative w-full h-30 lg:h-auto lg:w-2/3 bg-[url('https://placehold.co/600x150')] bg-center bg-cover rounded-xl">
+          <div className="relative w-full h-30 lg:h-auto lg:w-2/3 bg-[url('/img/01.webp')] bg-center bg-cover rounded-xl">
+            <div className="absolute inset-0 bg-black/60 rounded-xl hover:bg-black/30 transition-colors duration-300" />
             <div className="absolute bg-lime-600 bottom-3 right-3 px-3 lg:px-5 py-0.5 lg:py-1 flex justify-center items-center gap-1 rounded-2xl">
               <h1 className="text-4xl lg:text-6xl font-bold font-Sansation text-gray-950">
                 5

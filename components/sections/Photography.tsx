@@ -1,22 +1,25 @@
 import { Container } from "@/Container";
 import { ArrowRignt } from "@/icons/arrow";
 import { cn } from "lib/utils";
+import Wedding from "../assets/wedding.webp";
+import Event from "../assets/event.webp";
+import Potrait from "../assets/potrait.webp";
 
 const photoSections = [
   {
     title: "Through the Lens of Creativity",
     desc: "Phtography is the art of capturing moments and expressing emotions throuth visual storytelling.",
-    img: "https://placehold.co/600x200",
+    img: Wedding,
   },
   {
     title: "Discover the Art of Photography",
     desc: "Phtography is the art of capturing moments and expressing emotions throuth visual storytelling.",
-    img: "https://placehold.co/600x200",
+    img: Event,
   },
   {
     title: "Lens Love Infinite Creativity",
     desc: "Phtography is the art of capturing moments and expressing emotions throuth visual storytelling.",
-    img: "https://placehold.co/600x200",
+    img: Potrait,
   },
 ];
 
@@ -37,8 +40,8 @@ export function Photography() {
         {photoSections.map((section, index) => (
           <div
             className={cn(
-              "flex  flex-col-reverse lg:flex-row py-5 lg:py-10 gap-5 relative",
-              (index + 1) % 2 === 0 && "flex-col-reverse lg:flex-row-reverse"
+              "flex  flex-col-reverse lg:flex-row py-5 lg:py-10 gap-5 relative group",
+              (index + 1) % 2 === 0 && "flex-col-reverse lg:flex-row-reverse "
             )}
             key={index}
           >
@@ -51,11 +54,14 @@ export function Photography() {
                 <ArrowRignt />
               </div>
             </div>
-            <div className="relative w-full lg:w-3/5 max-h-full rounded-xl overflow-hidden ">
+            <div className="relative w-full lg:w-3/5 max-h-full  overflow-hidden ">
               <div
                 className={`absolute bg-black/20 bg-cover bg-center h-full w-full z-10`}
               />
-              <img src={section.img} className="object-cover  w-full h-full" />
+              <img
+                src={section.img}
+                className="object-cover  w-full h-full scale-95 group-hover:scale-100 rounded-xl transition-transform duration-500"
+              />
             </div>
           </div>
         ))}
