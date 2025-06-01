@@ -4,22 +4,26 @@ import { cn } from "lib/utils";
 import Wedding from "../assets/wedding.webp";
 import Event from "../assets/event.webp";
 import Potrait from "../assets/potrait.webp";
+import { href, Link } from "react-router";
 
 const photoSections = [
   {
     title: "Through the Lens of Creativity",
     desc: "Phtography is the art of capturing moments and expressing emotions throuth visual storytelling.",
     img: Wedding,
+    href: "wedding",
   },
   {
     title: "Discover the Art of Photography",
     desc: "Phtography is the art of capturing moments and expressing emotions throuth visual storytelling.",
     img: Event,
+    href: "event",
   },
   {
     title: "Lens Love Infinite Creativity",
     desc: "Phtography is the art of capturing moments and expressing emotions throuth visual storytelling.",
     img: Potrait,
+    href: "potrait",
   },
 ];
 
@@ -38,7 +42,8 @@ export function Photography() {
       </div>
       <div className="w-full">
         {photoSections.map((section, index) => (
-          <div
+          <Link
+            to={href("/gallery/:link", { link: section.href })}
             className={cn(
               "flex  flex-col-reverse lg:flex-row py-5 lg:py-10 gap-5 relative group",
               (index + 1) % 2 === 0 && "flex-col-reverse lg:flex-row-reverse "
@@ -63,7 +68,7 @@ export function Photography() {
                 className="object-cover  w-full h-full scale-95 group-hover:scale-100 rounded-xl transition-transform duration-500"
               />
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </Container>
